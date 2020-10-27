@@ -1,11 +1,17 @@
 import argparse
+from gendiff.utils import generate_diff
 
 
-def cli_call():
+def parse_args():
     parser = argparse.ArgumentParser(description='Process some integers.')
     parser.add_argument('first_file')
     parser.add_argument('second_file')
     parser.add_argument('-f', '--format', help='set format of output')
 
     args = parser.parse_args()
-    print(args)
+    return args
+
+
+def cli_call():
+    args = parse_args()
+    generate_diff(args.first_file, args.second_file)
