@@ -14,4 +14,4 @@ def parse_args():
 
 def cli_call():
     args = parse_args()
-    generate_diff(args.first_file, args.second_file)
+    print(generate_diff(args.first_file, args.second_file))
