@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gstr169_gendiff"
-version = "0.1.0"
+version = "0.2.0"
 description = "Generates diff."
 authors = ["d.finko <dmit.finn@yandex.ru>"]
 repository = "https://github.com/gstr169/python-project-lvl2"
@@ -13,7 +13,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8.5"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.3"
