@@ -1,13 +1,14 @@
+import pytest
 from gendiff import generate_diff
 
 
-def test_generate_diff():
-    result = '''{
-  - follow: False
-    host: hexlet.io
-  - proxy: 123.234.53.22
-  - timeout: 50
-  + timeout: 20
-  + verbose: True\n}'''
+@pytest.fixture
+def text_result():
+    with open('gendiff/tests/fixtures/result.txt') as file:
+        result = file.read()
+    return result
+
+
+def test_generate_diff(text_result):
     first_file, second_file = 'gendiff/tests/fixtures/file1.json', 'gendiff/tests/fixtures/file2.json'
-    assert generate_diff(first_file, second_file) == result
+    assert generate_diff(first_file, second_file) == text_result

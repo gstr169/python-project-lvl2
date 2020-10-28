@@ -15,7 +15,7 @@ Gendiff
 
 .. image:: https://github.com/gstr169/python-project-lvl2/workflows/Pytest%20CI/badge.svg
    :target: https://github.com/gstr169/python-project-lvl2/actions?query=workflow%3A%22Pytest+CI%22
-   :alt: Tests CI
+   :alt: Pytest CI
 
 Installation:
 #############
