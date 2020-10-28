@@ -9,5 +9,5 @@ def test_generate_diff():
   - timeout: 50
   + timeout: 20
   + verbose: True\n}'''
-    first_file, second_file = 'tests/fixtures/file1.json', 'tests/fixtures/file2.json'
+    first_file, second_file = 'gendiff/tests/fixtures/file1.json', 'gendiff/tests/fixtures/file2.json'
     assert generate_diff(first_file, second_file) == result
