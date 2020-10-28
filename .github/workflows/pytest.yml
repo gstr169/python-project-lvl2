@@ -1,4 +1,4 @@
-name: Flake8 CI
+name: Pytest CI
 
 on:
   - push
@@ -22,6 +22,6 @@ jobs:
         run: |
           pip install poetry
           make install
-      - name: Run linter
+      - name: Run tests
         run: |
-          make lint
+          make test
