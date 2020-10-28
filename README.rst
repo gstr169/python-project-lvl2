@@ -5,6 +5,10 @@ Gendiff
    :target: https://codeclimate.com/github/gstr169/python-project-lvl2/maintainability
    :alt: Maintainability
 
+.. image:: https://github.com/gstr169/python-project-lvl2/workflows/Python%20CI/badge.svg
+   :target: https://github.com/gstr169/python-project-lvl2/actions?query=workflow%3A%22Python+CI%22
+   :alt: Python CI
+
 Installation:
 #############
 
