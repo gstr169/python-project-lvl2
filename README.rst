@@ -5,13 +5,17 @@ Gendiff
    :target: https://codeclimate.com/github/gstr169/python-project-lvl2/maintainability
    :alt: Maintainability
 
+.. image:: https://api.codeclimate.com/v1/badges/ed2ebf2718ea4f0e304e/test_coverage
+   :target: https://codeclimate.com/github/gstr169/python-project-lvl2/test_coverage
+   :alt: Test Coverage
+
 .. image:: https://github.com/gstr169/python-project-lvl2/workflows/Flake8%20CI/badge.svg
    :target: https://github.com/gstr169/python-project-lvl2/actions?query=workflow%3A%22Flake8+CI%22
-   :alt: Flake8
+   :alt: Flake8 CI
 
 .. image:: https://github.com/gstr169/python-project-lvl2/workflows/Pytest%20CI/badge.svg
    :target: https://github.com/gstr169/python-project-lvl2/actions?query=workflow%3A%22Pytest+CI%22
-   :alt: Tests
+   :alt: Tests CI
 
 Installation:
 #############
