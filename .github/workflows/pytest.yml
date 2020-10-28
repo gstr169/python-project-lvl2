@@ -44,8 +44,11 @@ jobs:
         run: |
           pip install poetry
           make install
+      - name: Run coverage
+        run: |
+          poetry run coverage run -m pytest gendiff
       - uses: paambaati/codeclimate-action@v2.7.4
         env:
           CC_TEST_REPORTER_ID: 7c2ce1ccee44d9f76fc406bbfff01b2d956e8d2476f7d7cf95aaf504bed6afce
         with:
-          coverageCommand: poetry run coverage run -m pytest gendiff
+          coverageLocations: ${{github.workspace}}/coverage:coverage.py
