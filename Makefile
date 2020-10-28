@@ -16,6 +16,6 @@ publish:
 	poetry publish -r test_pypi
 
 test:
-	pytest
-
+	poetry run pytest tests
+g
 .PHONY: install lint selfcheck check build publish
