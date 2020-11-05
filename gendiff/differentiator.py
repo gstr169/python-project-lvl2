@@ -1,12 +1,7 @@
 import os
 from gendiff.parsers import parse_data
-
-
-def to_str(value):
-    if isinstance(value, bool):
-        return 'true' if value else 'false'
-
-    return value
+from gendiff.tree_builder import build_tree
+from gendiff.formatter import format_output
 
 
 def get_format(file_path):
@@ -20,24 +15,7 @@ def get_data(file_path):
     return data
 
 
-def generate_diff(first_file, second_file):
+def generate_diff(first_file, second_file, format_name='stylish'):
     first_data, second_data = get_data(first_file), get_data(second_file)
-    minus_template = '  - {}: {}\n'
-    no_changes_template = '    {}: {}\n'
-    plus_template = '  + {}: {}\n'
-    result = '{\n'
-    for key, value in sorted(first_data.items()):
-        if second_value := second_data.pop(key, None):
-            if value == second_value:
-                result += no_changes_template.format(key, to_str(value))
-            else:
-                result += minus_template.format(key, to_str(value))
-                result += plus_template.format(key, to_str(second_value))
-        else:
-            result += minus_template.format(key, to_str(first_data[key]))
-
-    for key, value in sorted(second_data.items()):
-        result += plus_template.format(key, to_str(value))
-
-    result += '}'
-    return result
+    result = build_tree(first_data, second_data)
+    return format_output(format_name, result)
