@@ -18,6 +18,6 @@ formats = ['json', 'yml']
 
 
 @pytest.mark.parametrize('format', formats)
-def test_generate_diff():
-    first_filename, second_filename = f'file1.{format}', f'file2.{format}'
-    assert generate_diff(get_path(first_filename), get_path(second_filename)) == get_data('result.txt')
+def test_generate_diff(format):
+    first_filename, second_filename = get_path(f'file1.{format}'), get_path(f'file2.{format}')
+    assert generate_diff(first_filename, second_filename) == get_data('result_stylish.txt')
