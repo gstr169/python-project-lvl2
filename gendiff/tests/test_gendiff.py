@@ -21,3 +21,4 @@ formats = ['json', 'yml']
 def test_generate_diff(format):
     first_filename, second_filename = get_path(f'file1.{format}'), get_path(f'file2.{format}')
     assert generate_diff(first_filename, second_filename) == get_data('result_stylish.txt')
+    assert generate_diff(first_filename, second_filename, 'plain') == get_data('result_plain.txt')
