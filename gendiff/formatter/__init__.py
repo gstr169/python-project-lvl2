@@ -15,4 +15,5 @@ def format_output(format_name, tree):
 
     raise ValueError(f'Unknown format: {format_name}')
 
+
 __all__ = ['render_stylish', 'format_output']
