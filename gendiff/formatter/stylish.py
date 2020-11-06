@@ -40,6 +40,13 @@ def render_subject(subject, depth=0):
         result = '\n'.join(rows)
         return f"{indent}  {subject['key']}: {{\n{result}\n{indent}  }}"
 
+    if subject['status'] == 'changed':
+        result_old = to_str(value[0], depth)
+        result_new = to_str(value[1], depth)
+        result_old = f"{indent}- {subject['key']}: {result_old}"
+        result_new = f"{indent}+ {subject['key']}: {result_new}"
+        return '\n'.join((result_old, result_new))
+
     result = to_str(value, depth)
 
     if subject['status'] == 'added':

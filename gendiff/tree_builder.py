@@ -28,14 +28,8 @@ def build_subtree(first_data, second_data):
         elif first_data[key] != second_data[key]:
             subject = {
                 'key': key,
-                'value': first_data[key],
-                'status': 'deleted'
-            }
-            result.append(subject)
-            subject = {
-                'key': key,
-                'value': second_data[key],
-                'status': 'added'
+                'value': [first_data[key], second_data[key]],
+                'status': 'changed'
             }
             result.append(subject)
         else:
