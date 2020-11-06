@@ -30,8 +30,29 @@ How to run:
 #################
 
 Generate diff:
-*************
+**************
 
 .. image:: https://asciinema.org/a/jR3vexSDQp7lyjlXbM4ohUb2o.svg
    :target: https://asciinema.org/a/jR3vexSDQp7lyjlXbM4ohUb2o
+   :alt: Asciinema
+
+Stylish diff:
+*************
+
+.. image:: https://asciinema.org/a/6UolWPEaPDPn2PXg5n66T4AnZ.svg
+   :target: https://asciinema.org/a/6UolWPEaPDPn2PXg5n66T4AnZ
+   :alt: Asciinema
+
+Plain diff:
+***********
+
+.. image:: https://asciinema.org/a/1pZpjWiXUEoHXCaG7lcxusXTq.svg
+   :target: https://asciinema.org/a/1pZpjWiXUEoHXCaG7lcxusXTq
+   :alt: Asciinema
+
+JSON diff:
+**********
+
+.. image:: https://asciinema.org/a/Q0Arup1X2oR67mG3zORn4j50Z.svg
+   :target: https://asciinema.org/a/Q0Arup1X2oR67mG3zORn4j50Z
    :alt: Asciinema
